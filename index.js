@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-const tcp = require('net'); // load required TCP library from Node.js default libs
+import tcp from 'net'; // load required TCP library from Node.js default libs
 
 const PORT = 5000;
 const ADDRESS = '127.0.0.1'; // setup default configuration

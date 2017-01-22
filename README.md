@@ -28,7 +28,7 @@ Additional Notes:
 
 ## Phase 1: Booting up
 `index.js`
-1. Load the required TCP library from the Node.js default libs `const tcp = require('net')`.
+1. Import TCP library from the Node.js default libs `'net'`.
 2. Setup default configuration for `PORT` and `ADDRESS` values.
 3. Create a new TCP `server` and pass as a callback `onClientConnected` which will be executed whenever a new client connects to `server`.
 
@@ -73,3 +73,14 @@ Recap: Create a server that accepts a client connection, displayed information a
     ```
 
 ## Phase 3: Multiple Clients
+
+**NB**: Broadcasting is the act of sending a message to everyone on the network.
+
+Abstract into `Server` and `Client` classes.
+`init.js`
++ Import `Server` class and start a new instance of a `Server` at default configuration.
+
+`server.js`
+1. Import TCP library `'net'` and `Client` class.
+2. `constructor(port, address)` sets up values for `start` method and initializes a `clients` array that references all connected clients.
+3. `start(cb)` contains the contents of `onClientConnected` and instantiates a `Client` instance and adds it to `this.clients` array. `cb` is executed when the server finishes initializing.
