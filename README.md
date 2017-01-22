@@ -28,11 +28,13 @@ Additional Notes:
 
 ## Phase 1: Booting up
 `index.js`
+
 1. Import TCP library from the Node.js default libs `'net'`.
 2. Setup default configuration for `PORT` and `ADDRESS` values.
 3. Create a new TCP `server` and pass as a callback `onClientConnected` which will be executed whenever a new client connects to `server`.
 
 To run:
+
 1. Set the file to be executed with `chmod +x index.js`.
 2. Start the server with `npm start`.
 3. Receive `Server started at: 127.0.0.1:5000` message.
@@ -47,9 +49,10 @@ Recap: Create a server that accepts a client connection, displayed information a
   + `socket.on('data', callback )` calls `callback` when the server receives data from the client. `data` can be a bugger of bytes or a string.
   + `socket.on('end', callback )` calls `callback` when the client disconnects from the server.
 
-  To run:
-  1. Run `telnext 127.0.0.1 5000`.
-  2. Write a message to server.
+To run:
+  
+1. Run `telnext 127.0.0.1 5000`.
+2. Write a message to server.
 
   Sample outputs:
   + Server
@@ -81,6 +84,7 @@ Abstract into `Server` and `Client` classes.
 + Import `Server` class and start a new instance of a `Server` at default configuration.
 
 `server.js`
+
 1. Import TCP library `'net'` and `Client` class.
 2. `constructor(port, address)` sets up values for `start` method and initializes a `clients` array that references all connected clients.
 3. `start(cb)` contains the contents of `onClientConnected` and instantiates a `Client` instance and adds it to `this.clients` array. `cb` is executed when the server finishes initializing.
