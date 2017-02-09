@@ -1,4 +1,5 @@
-Walkthrough of TCP Server with Node.js [Tutorial](http://frostybay.com/articles/tcp-server-with-nodejs) by Richard Eitz.
+# Walkthrough of TCP Server with Node.js [Tutorial](http://frostybay.com/articles/tcp-server-with-nodejs) 
+by Richard Eitz
 
 Topics covered:
 + Setup and configuration of a Node.js app
